@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Color Spectrum: Empowering the Youth to Light the Way</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+:root {
+    --color-dark: #0D1321;         
+    --color-medium: #1D2A42;        
+    --color-blue-primary: #3498DB;  
+    --color-blue-light: #5DADE2;   
+    --color-text-light: #E0E0E0;    
+    --color-text-dim: #A0A0A0;      
+    --color-white: #FFFFFF;        
+    --spacing-section: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue-primary);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-blue-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: var(--spacing-section) 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-label {
+    display: block;
+    color: var(--color-blue-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-blue-primary);
+    color: var(--color-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-blue-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-blue-primary); 
+    padding: 20px 30px;
+    color: var(--color-blue-primary); 
+    font-weight: 600;
+}
+.btn-secondary:hover {
+    background-color: var(--color-blue-primary); 
+    color: var(--color-dark); 
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+.highlight-green {
+    color: var(--color-blue-primary);
+}
+
+.top-bar {
+    background-color: var(--color-medium);
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-bar .contact-info, .top-bar .follow-us {
+    padding: 0 20px;
+}
+
+.top-bar i {
+    margin-right: 5px;
+    color: var(--color-blue-light);
+}
+
+.main-header {
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: var(--color-text-light);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-blue-primary);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after, .current-page::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.phone-link {
+    color: var(--color-blue-light);
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: var(--color-blue-primary);
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.rainbow-line {
+    height: 8px;
+    background: linear-gradient(to right,
+        #ff4e4e, #ffa935, #fff352,
+        #4cd37d, #47b0ff, #7b6dff, #d56dff);
+    position: sticky;
+    top: 80px;
+    z-index: 999;
+    
+}
+
+.hero-intro {
+    padding: 100px 0;
+}
+.main-heading {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+.hero-subtext {
+    font-size: 1.3rem;
+    color: var(--color-text-dim);
+    max-width: 850px;
+    margin: 0 auto 50px;
+}
+.hero-actions a {
+    margin: 0 10px;
+}
+
+.hero-intro {
+    padding: 100px 0;
+}
+.main-heading {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+.hero-subtext {
+    font-size: 1.3rem;
+    color: var(--color-text-dim);
+    max-width: 850px;
+    margin: 0 auto 50px;
+}
+.hero-actions a {
+    margin: 0 10px;
+}
+
+.about-cards-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.about-card {
+    background-color: var(--color-medium);
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.about-icon {
+    font-size: 3rem;
+    color: #2c7be5;
+    margin-bottom: 15px;
+}
+
+.about-card h2 {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 1rem;
+    color: var(--color-white);
+    line-height: 1.7;
+}
+
+.values-section {
+    margin: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-blue-primary);
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+.value-card {
+    background-color: var(--color-medium);
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--color-blue-primary);
+    margin-bottom: 12px;
+}
+
+.value-card h3 {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    color: var(--color-white);
+    line-height: 1.5;
+}
+
+.team-section {
+    padding: var(--spacing-section) 0;
+    background-color: var(--color-dark); 
+}
+
+.team-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--color-blue-primary);
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+    justify-items: center;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+.team-card {
+    background-color: var(--color-medium);
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    border-top: 5px solid var(--color-blue-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--color-blue-primary);
+    margin: 0 auto 15px auto; 
+    display: block;
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-white);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.team-card .role {
+    font-size: 0.95rem;
+    color: var(--color-blue-primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-card .desc {
+    font-size: 0.9rem;
+    color: var(--color-text-dim);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.social-links {
+    margin-top: 12px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--color-blue-primary);
+    font-size: 1.2rem;
+    margin: 0 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #1a5dbf;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .hero-about h1 {
+        font-size: 2.2rem;
+    }
+    .hero-about p {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .about-card h2 {
+        font-size: 1.4rem;
+    }
+    .team-title {
+        font-size: 2rem;
+    }
+}
+
+.newsletter-strip {
+    background-color: var(--color-blue-primary);
+    padding: 30px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-dark);
+}
+
+.newsletter-content i {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.newsletter-content h3 {
+    color: var(--color-dark);
+    margin: 0;
+    flex-grow: 1;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 400px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    flex-grow: 1;
+}
+
+.newsletter-form button {
+    border-radius: 0 50px 50px 0;
+    padding: 10px 20px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.main-footer {
+    background-color: var(--color-medium);
+    padding-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+.footer-column a, .footer-column p {
+    display: block;
+    color: var(--color-text-dim);
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: var(--color-green-light);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.site-title-footer {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-left: 10px;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--color-text-dim);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 0;
+    text-align: center;
+}V 
+.footer-bottom p {
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.42;
+    filter: blur(4px);
+    animation: float 12s infinite ease-in-out;
+}
+
+@media (max-width: 992px) {
+    .main-header {
+        flex-wrap: wrap;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .main-nav ul {
+        justify-content: space-around;
+    }
+    .image-content .small-image {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        text-align: center;
+    }
+    .main-heading {
+        font-size: 3rem;
+    }
+    .cards-grid, .blog-articles-grid, .donation-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+<body>
+
+    <div class="top-bar">
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i><a href="mailto:thecolorspectrum.advocacy@gmail.com">thecolorspectrum.advocacy@gmail.coms</a>
+            <i class="fas fa-map-marker-alt"></i> Batangas City, Philippines
+        </div>
+        <div class="follow-us">
+            <span>Follow Us:</span>
+            <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/thecolorspectrum.advocacy?igsh=MXR5djhldXhkZXg4dA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/youthempow62747?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/the-color-spectrum-17b474399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="logo">
+            <a href="https://batstateu.edu.ph/" target="_blank">
+                <img src="BatStateU-NEU-Logo-1-300x282.png" alt="BatStateU Logo" width="50" height="50">
+            </a>
+            
+            <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank">
+                <img src="color spectrum logo.png" alt="The Color Spectrum Logo" width="52" height="52">
+            </a>
+        </div>    
+        <nav class="main-nav" aria-label="Main Website Navigation">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li> 
+                <li><a href="about us.html" class="nav-link current-page">About Us</a></li>
+                <li><a href="youth empowerment.html" class="nav-link">Empowerment</a></li>
+                <li><a href="voters education.html" class="nav-link">Education</a></li>
+                <li><a href="form.html" class="nav-link">Join Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="tel:+639272524247" class="phone-link"><i class="fas fa-phone"></i> +63 927 252 4247</a>
+            <a href="form.html" class="btn btn-primary get-quote-btn">Get Involved</a>
+            <button class="search-btn" aria-label="Search website"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    <div class="rainbow-line"></div>
+
+    <section class="section-padding hero-intro">
+        <div class="container text-center">
+            <p class="section-label">The Color Spectrum: Empowering the Youth to Light the Way</p>
+            <h1 class="main-heading">About Us</h1>
+            <p class="hero-subtext">
+                Empowering youth to be informed, responsible, and active citizens through voter education and civic engagement. 
+                We are youth-driven advocates dedicated to making democracy accessible and engaging for students. 
+                Join us as we inspire the next generation to take part in shaping the future of our communities and nation.
+            </p>
+        </div>
+    </section>
+    
+    <section class="about-cards-section">
+        <div class="about-card">
+            <div class="about-icon"><i class="fas fa-bullseye"></i></div>
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to provide accessible voter education and empower the youth to make informed decisions. 
+                We aim to equip students and first-time voters with the knowledge, skills, and confidence needed to actively participate in democracy. 
+                By simplifying complex voting processes and offering practical guidance, we help young people take meaningful steps toward civic engagement.
+            </p>
+        </div>
+    
+        <div class="about-card">
+            <div class="about-icon"><i class="fas fa-eye"></i></div>
+            <h2>Our Vision</h2>
+            <p>
+                We envision a generation of young voters who are informed, responsible, and proactive in shaping their communities and nation. 
+                Our goal is to create a culture where youth actively seek knowledge, critically evaluate information, and confidently participate in civic life. 
+                By inspiring awareness and responsibility, we hope to cultivate future leaders who value democracy and public service.
+            </p>
+        </div>
+    
+        <div class="about-card">
+            <div class="about-icon"><i class="fas fa-book-open"></i></div>
+            <h2>Our Story</h2>
+            <p>
+                This project began when our team realized that many young people felt confused or unprepared about voting and civic participation. 
+                To address this, we created a website offering clear, student-friendly information on voter education, youth empowerment, and civic engagement. 
+                Through this platform, we aim to make democracy more accessible, encourage active participation, and help the youth understand their important role in shaping the future.
+            </p>
+        </div>
+    </section>
+            <section class="values-section">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Youth Empowerment</h3>
+                        <p>Helping students understand their role in society.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-vote-yea"></i>
+                        <h3>Civic Responsibility</h3>
+                        <p>Encouraging informed and responsible participation in elections.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Accurate Information</h3>
+                        <p>Providing content that is clear, factual, and reliable.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-universal-access"></i>
+                        <h3>Accessibility</h3>
+                        <p>Making all information easy to read and understand for everyone.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="team-section">
+                <h2 class="team-title">Meet Our Team of Developers</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="charles id pic.jfif" alt="Charles Jullianne Q. Arile">
+                        <h3>Charles Jullianne Q. Arile</h3>
+                        <p class="role">Lead Programmer/Layout Manager</p>
+                        <p class="desc">
+                            Developed the Landing Page, About Us Page, and Voter Education Page.
+                            Responsible for overall layout, structure, and design.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/charlesjullianne.arileii" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/_charlessssz/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="kierulf id pic.jpg" alt="Kierulf E. Rivera">
+                        <h3>Kierulf E. Rivera</h3>
+                        <p class="role">Programmer 1</p>
+                        <p class="desc">
+                            Created the static form, ensuring submissions work smoothly and correctly.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/kierulf.rivera.2024" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/kuen_lacrosse__/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="ghan id pic.jfif" alt="Ghan Vincent T. Alfajaro">
+                        <h3>Ghan Vincent A. Alfajaro</h3>
+                        <p class="role">Programmer 2</p>
+                        <p class="desc">
+                            Focused on the Youth Empowerment section, crafting content and visuals that explain its importance clearly.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/ghan.tapalla" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ghanalfajaro/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    <div class="newsletter-strip">
+        <div class="container newsletter-content">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Stay Informed, Stay Empowered</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-grid container">
+            <div class="footer-column branding-and-social">
+                <div class="footer-logo">
+                    <a href="https://batstateu.edu.ph/" target="_blank">
+                        <img src="BatStateU-NEU-Logo-1-300x282.png" alt="BatStateU Logo" width="50" height="50">
+                    </a>
+                    
+                    <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank">
+                        <img src="color spectrum logo.png" alt="The Color Spectrum Logo" width="52" height="52">
+                    </a>
+                </div>    
+                <p>Empowering the youth to light the way for a more informed and engaged democracy.</p>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/thecolorspectrum.advocacy?igsh=MXR5djhldXhkZXg4dA==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/youthempow62747?s=21" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/the-color-spectrum-17b474399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="#">Resources</a>
+                <a href="join.html">Get Involved</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-column services">
+                <h3>What We Offer</h3>
+                <a href="#">Voter Education</a>
+                <a href="#">Youth Empowerment</a>
+                <a href="#">Civic Engagement</a>
+                <a href="#">Leadership Mentoring</a>
+                <a href="#">Community Action</a>
+            </div>
+                <div class="footer-column contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:thecolorspectrum.advocacy@gmail.com">thecolorspectrum.advocacy@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+639272524247">+63 927 252 4247</a></p>
+                    <p>Address: Batangas City, Philippines</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Color Spectrum: Empowering the Youth to Light the Way. All Rights Reserved. </p>
+        </div>
+    </footer>
+</body>
+</html

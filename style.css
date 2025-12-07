@@ -1,0 +1,538 @@
+<style>
+    :root {
+    --color-primary: #1ad49d; /* Vibrant Teal/Aqua */
+    --color-secondary: #a355ff; /* Bright Violet */
+    --color-dark: #001129; /* Deep Indigo Background */
+    --color-light: #ffffff; /* Off-White Text/UI */
+    --color-text: #e5e7eb; /* Light Gray for body text */
+    --color-accent: #ffa200; /* Amber for highlights */
+    --max-width: 1200px;
+    --border-radius: 0.75rem; /* Large rounded corners */
+    --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-strong: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -4px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-dark);
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+h1, h2, h3 {
+    color: var(--color-light);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+h3 { font-size: 1.5rem; }
+
+section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. BUTTONS */
+/* ------------------------------------------------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 9999px; /* Pill shape */
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-subtle);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+.btn-primary:hover {
+    background-color: #17a67f; /* Slightly darker teal */
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-light);
+    border: 2px solid var(--color-secondary);
+    background-image: linear-gradient(45deg, var(--color-secondary) 0%, #d8b4fe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 0.75rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-secondary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 9999px;
+    border: 2px solid var(--color-secondary);
+    background: transparent;
+    z-index: -1;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover::after {
+    background-color: rgba(163, 85, 255, 0.15); /* Light hover overlay */
+    border-color: #d8b4fe;
+}
+
+.btn-secondary:hover {
+    color: var(--color-light); /* Ensure text is visible on hover */
+    background-image: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    color: var(--color-light);
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. HEADER & NAVIGATION */
+/* ------------------------------------------------------------------- */
+header { 
+    background-color: #0f172a;               /* header background */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 2rem;                  /* space inside header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;                             /* full width */
+    box-sizing: border-box;                  /* include padding in width */
+    position: sticky;                        /* stick on top */
+    top: 0;
+    z-index: 100;
+}
+
+/* Center content inside header */
+.header-container {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* spacing when wrapped */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Navigation links */
+nav {
+    display: flex;
+    justify-content: center; /* center nav items */
+    flex: 1; /* allow nav to grow */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem; /* spacing between links */
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--color-text);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--color-text);
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+}
+/* ------------------------------------------------------------------- */
+/* 4. HERO SECTION */
+/* ------------------------------------------------------------------- */
+
+.hero {
+    text-align: center;
+    padding: 6rem 1.5rem;
+    background: radial-gradient(circle at center, rgba(32, 201, 151, 0.05) 0%, transparent 70%);
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(32, 201, 151, 0.3);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: var(--color-light);
+}
+
+.hero .btn {
+    margin: 0 0.5rem;
+}
+
+/* ------------------------------------------------------------------- */
+/* 5. CARDS LAYOUT (The Challenge, Our Approach) */
+/* ------------------------------------------------------------------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #2b394d; /* Slightly lighter dark background for contrast */
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-subtle);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--color-primary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.4);
+    border-color: var(--color-secondary);
+}
+
+.card img {
+    width: 80px; /* slightly bigger icon/image */
+    height: 80px;
+    border-radius: 50%; /* makes the image fully round */
+    object-fit: cover; /* keeps the image proportionate */
+    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* subtle depth */
+}
+
+.card:hover img {
+    transform: scale(1.15) rotate(5deg);
+    filter: brightness(1.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* stronger shadow on hover */
+}
+.card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+/* ------------------------------------------------------------------- */
+/* 6. WHO WE ARE (About Section) */
+/* ------------------------------------------------------------------- */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about img {
+    max-width: 50%;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    box-shadow: var(--shadow-strong);
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustment for About section */
+@media (max-width: 900px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about img {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* 7. FAQ (Accordion Style with CSS only) */
+/* ------------------------------------------------------------------- */
+
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #374151;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: #2b394d;
+}
+
+.faq-item input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+.faq-item label {
+    display: block;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-light);
+    background-color: #374151;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item label::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    color: var(--color-primary);
+}
+
+.faq-item label:hover {
+    background-color: #4b5563;
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-content p {
+    padding: 0 1.5rem;
+    color: var(--color-text);
+}
+
+/* CSS magic: When checkbox is checked, expand the content and rotate the plus sign */
+.faq-item input[type="checkbox"]:checked + label {
+    background-color: #4b5563;
+}
+
+.faq-item input[type="checkbox"]:checked + label::after {
+    content: '—';
+    transform: rotate(0deg); /* Change to minus sign */
+    color: var(--color-secondary);
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-content {
+    max-height: 200px; /* Needs to be larger than content height */
+    padding: 1.5rem;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* 8. CALL TO ACTION (CTA) */
+/* ------------------------------------------------------------------- */
+
+.cta {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    text-align: center;
+    padding: 5rem 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 4rem;
+    border: 1px solid var(--color-secondary);
+}
+
+.cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--color-light);
+}
+
+/* ------------------------------------------------------------------- */
+/* 9. FOOTER */
+/* ------------------------------------------------------------------- */
+
+.main-footer {
+    background-color: #0f172a;
+    color: var(--color-text);
+    padding: 3rem 1.5rem;
+    border-top: 4px solid var(--color-primary);
+    margin-top: 3rem;
+}
+
+/* Grid Layout */
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Column Alignment */
+.contact-info {
+    text-align: left;
+}
+
+.quick-links {
+    text-align: left;
+}
+
+.follow-us {
+    text-align: left;
+}
+
+/* Titles */
+.footer-column h3 {
+    color: var(--color-light);
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 0.4rem;
+}
+
+/* Text & Links */
+.footer-column a {
+    display: block; /* puts each link in a new line */
+    margin: 6px 0;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: var(--color-accent);
+    padding-left: 4px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Address styling */
+address {
+    font-style: normal;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* stack columns */
+        text-align: left;
+    }
+
+    .quick-links,
+    .follow-us {
+        text-align: left; /* prevents awkward centering on mobile */
+    }
+}
+
+/* Ensure no HTML is visible below the footer */
+html {
+    background-color: var(--color-dark);
+}
+</style>

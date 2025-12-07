@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Color Spectrum: Empowering the Youth to Light the Way</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+:root {
+    --color-dark: #0D1321;
+    --color-medium: #1D2A42;
+    --color-blue-primary: #3498DB;
+    --color-blue-light: #5DADE2;
+    --color-text-light: #E0E0E0;
+    --color-text-dim: #A0A0A0;
+    --color-white: #FFFFFF;
+    --spacing-section: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue-primary);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-blue-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: var(--spacing-section) 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-label {
+    display: block;
+    color: var(--color-blue-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-blue-primary);
+    color: var(--color-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-blue-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-blue-primary);
+    padding: 20px 30px;
+    color: var(--color-blue-primary);
+    font-weight: 600;
+}
+.btn-secondary:hover {
+    background-color: var(--color-blue-primary);
+    color: var(--color-dark);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+.highlight-green {
+    color: var(--color-blue-primary);
+}
+
+.top-bar {
+    background-color: var(--color-medium);
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-bar .contact-info, .top-bar .follow-us {
+    padding: 0 20px;
+}
+
+.top-bar i {
+    margin-right: 5px;
+    color: var(--color-blue-light);
+}
+
+.header-wrap {
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    background-color: var(--color-dark); 
+}
+
+.main-header {
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: var(--color-text-light);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-blue-primary);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after, .current-page::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.phone-link {
+    color: var(--color-blue-light);
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: var(--color-blue-primary);
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.rainbow-line {
+    height: 8px;
+    background: linear-gradient(to right,
+        #ff4e4e, #ffa935, #fff352,
+        #4cd37d, #47b0ff, #7b6dff, #d56dff);
+    z-index: 999;
+}
+
+.hero-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.main-heading {
+    font-size: 3.8rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-dim);
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.42;
+    filter: blur(4px);
+    animation: float 12s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%    { transform: translateY(0); }
+    50%   { transform: translateY(-22px); }
+    100% { transform: translateY(0); }
+}
+
+
+.left-b1 { width:150px;height:150px;left:15px;top:260px;background:rgba(120,160,255,0.35); }
+.left-b2 { width:130px;height:130px;left:20px;bottom:160px;background:rgba(255,150,200,0.25); }
+.right-b1 { width:150px;height:150px;right:15px;top:350px;background:rgba(255,210,150,0.3); }
+.right-b2 { width:130px;height:130px;right:20px;bottom:150px;background:rgba(120,255,210,0.3); }
+
+
+.bottom-b1 { width:170px;height:170px;bottom:700px;left:22%;background:rgba(255,150,190,0.25); }
+.bottom-b2 { width:140px;height:140px;bottom:-410px;right:88%;background:rgba(200,140,255,0.25); }
+.bottom-b4 { width: 160px;height: 160px;bottom: 20px;left: 10%;background: rgba(120,200,255,0.28); }
+.bottom-b5 {width: 130px;height: 130px;bottom: 55px;left: 45%;background: rgba(170,150,255,0.25); }
+.bottom-b6 {width: 110px;height: 110px;bottom: 30px;right: 12%;background: rgba(255,180,200,0.3); }
+
+.form-container {
+    width: 95%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.12);
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 8px solid #6c80ff;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    color: white;
+}
+
+.form-container form label {
+    display: block;
+    margin-top: 14px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.form-container form input[type="checkbox"],
+.form-container form input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    color: #4a7bff;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
+.form-container form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+.form-container form select {
+    width: 100%;
+    padding: 12px;
+    background: #f4f6ff;
+    border: 1px solid #cfd5f0;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #1e1e1e;
+}
+
+.form-container form h3 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.submit-btn {
+    margin-top: 28px;
+    width: 100%;
+    padding: 14px;
+    background: #2342a8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #3354c0;
+}
+
+.newsletter-strip {
+    background-color: var(--color-blue-primary);
+    padding: 30px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-dark);
+}
+
+.newsletter-content i {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.newsletter-content h3 {
+    color: var(--color-dark);
+    margin: 0;
+    flex-grow: 1;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 400px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    width: auto;
+    flex-grow: 1;
+}
+
+.newsletter-form button {
+    border-radius: 0 50px 50px 0;
+    padding: 10px 15px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    height: 100%;
+}
+
+.main-footer {
+    background-color: var(--color-medium);
+    padding-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+.footer-column a, .footer-column p {
+    display: block;
+    color: var(--color-text-dim);
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: var(--color-blue-light);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.site-title-footer {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-left: 10px;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--color-text-dim);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 992px) {
+
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .main-header {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .main-nav ul {
+        justify-content: space-around;
+        padding: 0;
+    }
+    .main-nav li {
+        margin: 0 5px;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .newsletter-content i {
+        margin-right: 0;
+    }
+    .newsletter-form {
+        max-width: 600px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-grid {
+        
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+ 
+    .section-padding {
+        padding: 40px 0;
+    }
+    .bubble {
+        display: none !important;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center; 
+    }
+    .top-bar .contact-info, .top-bar .follow-us {
+        padding: 5px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: center; 
+        padding: 10px 20px;
+    }
+    
+    .header-actions {
+        flex-direction: column;
+        align-items: center; 
+        width: 100%;
+        gap: 10px;
+        margin-top: 15px; 
+    }
+    
+    .phone-link, .search-btn {
+        display: none; 
+    }
+    
+    .btn {
+        width: 80%; 
+        padding: 10px 20px;
+    }
+    
+    .main-nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav li {
+        margin: 5px 8px; 
+    }
+    
+    .main-heading {
+        font-size: 2.5rem; 
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .newsletter-form {
+        width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-logo {
+        justify-content: center;
+        margin-left: -5px; 
+    }
+    .footer-column.branding-and-social {
+        text-align: center;
+    }
+}
+</style>
+<body>
+
+    <div class="top-bar">
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i><a href="mailto:thecolorspectrum.advocacy@gmail.com">thecolorspectrum.advocacy@gmail.com</a>
+            <i class="fas fa-map-marker-alt"></i> Batangas City, Philippines
+        </div>
+        <div class="follow-us">
+            <span>Follow Us:</span>
+            <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/_charlessssz/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/youthempow62747?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    
+    <div class="header-wrap">
+        <header class="main-header">
+            <div class="logo">
+                <a href="https://batstateu.edu.ph/" target="_blank">
+                    <img src="BatStateU-NEU-Logo-1-300x282.png" alt="BatStateU Logo" width="50" height="50">
+                </a>
+                
+                <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank">
+                    <img src="color spectrum logo.png" alt="The Color Spectrum Logo" width="52" height="52">
+                </a>
+            </div>    
+            <nav class="main-nav" aria-label="Main Website Navigation">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about us.html" class="nav-link">About Us</a></li>
+                    <li><a href="youth empowerment.html" class="nav-link">Empowerment</a></li>
+                    <li><a href="voters education.html" class="nav-link">Education</a></li>
+                    <li><a href="form tuu.html" class="nav-link current-page">Join Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+639272524247" class="phone-link"><i class="fas fa-phone"></i> +63 927 252 4247</a>
+                <a href="form tuu.html" class="btn btn-primary get-quote-btn">Get Involved</a>
+                <button class="search-btn" aria-label="Search website"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+        <div class="rainbow-line"></div>
+    </div>
+    <section class="section-padding hero-intro">
+        <div class="container text-center">
+            <p class="section-label">The Color Spectrum: Empowering the Youth to Light the Way</p>
+            <h1 class="main-heading">
+                <span class="text-highlight">From Knowledge to Action</span> <br>
+                Advance Voters' Education & Youth Advocacy
+            </h1>
+            
+            <p class="hero-subtext">
+                Don't just observe—participate! Fill out the form to select your areas of interest, from Voter Education Workshops to Youth Leadership Training, and become an active catalyst for political integrity in your community.
+            </p>
+        </div>
+    </section>
+
+    <div class="bubble left-b1"></div>
+    <div class="bubble left-b2"></div>
+    <div class="bubble right-b1"></div>
+    <div class="bubble right-b2"></div>
+    <div class="bubble bottom-b1"></div>
+    <div class="bubble bottom-b2"></div>
+    
+    <div class="bubble bottom-b4"></div>
+    <div class="bubble bottom-b5"></div>
+    <div class="bubble bottom-b6"></div>
+    
+    <div class="form-container">
+        <h2>✨ Get Involved!</h2>
+        <p>Help us empower the youth and promote informed voting. Fill out the form below to show your interest in our programs, workshops, and volunteer opportunities.</p>
+    
+        <form>
+    
+            <label>Full Name</label>
+            <input type="text">
+    
+            <label>Age</label>
+            <input type="number">
+    
+            <label>Email Address</label>
+            <input type="email">
+    
+            <label>Contact Number</label>
+            <input type="text">
+    
+            <label>City / Municipality</label>
+            <input type="text">
+    
+            <hr>
+    
+            <h3>📚 Areas You're Interested In</h3>
+    
+            <label><input type="checkbox"> Voter Education Workshops</label>
+            <label><input type="checkbox"> Youth Leadership Training</label>
+            <label><input type="checkbox"> Community Outreach Volunteering</label>
+            <label><input type="checkbox"> Social Media Campaign Participation</label>
+            <label><input type="checkbox"> Registration Assistance Drives</label>
+            <label><input type="checkbox"> Attending Youth Forums</label>
+    
+            <hr>
+    
+            <h3>🕒 Preferred Schedule for Activities</h3>
+            <select>
+                <option>Weekdays</option>
+                <option>Weekend Only</option>
+                <option>Anytime Available</option>
+            </select>
+    
+            <hr>
+    
+            <h3>📢 Would You Like to Receive Updates About Our Advocacy?</h3>
+            <label><input type="radio" name="updates"> Yes</label>
+            <label><input type="radio" name="updates"> No</label>
+    
+            <button type="button" class="submit-btn">Submit Form</button>
+        </form>
+    </div>
+
+    <div class="newsletter-strip">
+        <div class="container newsletter-content">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Stay Informed, Stay Empowered</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-grid container">
+            <div class="footer-column branding-and-social">
+                <div class="footer-logo">
+                    <a href="https://batstateu.edu.ph/" target="_blank">
+                        <img src="BatStateU-NEU-Logo-1-300x282.png" alt="BatStateU Logo" width="50" height="50">
+                    </a>
+                    
+                    <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank">
+                        <img src="color spectrum logo.png" alt="The Color Spectrum Logo" width="52" height="52">
+                    </a>
+                </div>    
+                <p>Empowering the youth to light the way for a more informed and engaged democracy.</p>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/_charlessssz/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/youthempow62747?s=21" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="#">Resources</a>
+                <a href="form tuu.html">Get Involved</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-column services">
+                <h3>What We Offer</h3>
+                <a href="#">Voter Education</a>
+                <a href="#">Youth Empowerment</a>
+                <a href="#">Civic Engagement</a>
+                <a href="#">Leadership Mentoring</a>
+                <a href="#">Community Action</a>
+            </div>
+                <div class="footer-column contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:thecolorspectrum.advocacy@gmail.com">thecolorspectrum.advocacy@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+639272524247">+63 927 252 4247</a></p>
+                    <p>Address: Batangas City, Philippines</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Color Spectrum: Empowering the Youth to Light the Way. All Rights Reserved. </p>
+        </div>
+    </footer>
+</body>
+</html>

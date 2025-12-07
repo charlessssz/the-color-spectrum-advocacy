@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Color Spectrum: Empowering the Youth to Light the Way</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+:root {
+    --color-dark: #0D1321;         
+    --color-medium: #1D2A42;        
+    --color-blue-primary: #3498DB;  
+    --color-blue-light: #5DADE2;    
+    --color-text-light: #E0E0E0;    
+    --color-text-dim: #A0A0A0;      
+    --color-white: #FFFFFF;        
+    --spacing-section: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue-primary);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-blue-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: var(--spacing-section) 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-label {
+    display: block;
+    color: var(--color-blue-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-blue-primary);
+    color: var(--color-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-blue-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-blue-primary); 
+    padding: 20px 30px;
+    color: var(--color-blue-primary); 
+    font-weight: 600;
+}
+.btn-secondary:hover {
+    background-color: var(--color-blue-primary); 
+    color: var(--color-dark); 
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+.highlight-green {
+    color: var(--color-blue-primary);
+}
+
+.top-bar {
+    background-color: var(--color-medium);
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-bar .contact-info, .top-bar .follow-us {
+    padding: 0 20px;
+}
+
+.top-bar i {
+    margin-right: 5px;
+    color: var(--color-blue-light);
+}
+
+.main-header {
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: var(--color-text-light);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-blue-primary);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after, .current-page::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.phone-link {
+    color: var(--color-blue-light);
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: var(--color-blue-primary);
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.rainbow-line {
+    height: 8px;
+    background: linear-gradient(to right,
+        #ff4e4e, #ffa935, #fff352,
+        #4cd37d, #47b0ff, #7b6dff, #d56dff);
+    position: sticky;
+    top: 80px;
+    z-index: 999;
+    
+}
+
+.hero-section {
+    position: relative;
+    height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.main-heading {
+    font-size: 3.8rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-dim);
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+}
+
+.about-us-split {
+    background-color: var(--color-dark);
+}
+
+.about-us-split .text-content p{
+    margin-bottom: 25px;
+}
+
+.about-us-split .text-content .btn-secondary{
+    margin-top: 15px;
+    display: inline-block;
+}
+.split-layout {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    margin-bottom: 25px !important;
+}
+
+.image-content {
+    flex: 1;
+    position: relative;
+}
+
+.image-content .main-image {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-content .small-image {
+    position: absolute;
+    bottom: -20px;
+    left: -30px;
+    width: 300px;
+    border-radius: 12px;
+    border: 2px solid var(--color-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.experience-badge {
+    display: inline-block;
+    background-color: var(--color-blue-primary);
+    color: var(--color-dark);
+    padding: 12px 30px;
+    border-radius: 10px;
+    margin: 0 0 5px 0;
+    writing-mode: horizontal-tb;
+    transform: none;
+}
+
+.experience-badge {
+    margin: 0px;
+    padding: 12px 30px;
+}
+
+.experience-badge .number {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.experience-badge .text-small {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.stats-section {
+    background-color: var(--color-medium);
+    padding: var(--spacing-section) 0;
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    background-color: var(--color-dark);
+    padding: 30px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid var(--color-blue-primary);
+}
+
+.stat-item .icon-large {
+    font-size: 2.5rem;
+    color: var(--color-blue-light);
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-blue-primary);
+    line-height: 1;
+}
+
+.stat-description {
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.focus-note {
+    margin-top: 25px;
+    font-size: 1rem;
+    color: var(--color-white);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+
+}
+
+.cards-grid, .blog-articles-grid, .donation-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card, .blog-card, .donation-card {
+    background-color: var(--color-medium);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.service-card:hover, .blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img, .blog-card img, .donation-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.service-card h3, .blog-card h3, .donation-card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.service-card p, .donation-card p {
+    color: var(--color-text-dim);
+}
+
+.service-card {
+    padding-bottom: 30px;
+}
+
+.service-card > * {
+    padding: 0 25px;
+}
+
+.service-card h3 {
+    padding-top: 25px;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--color-blue-primary);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.read-more i {
+    margin-left: 5px;
+}
+
+.blog-card .card-content {
+    padding: 25px;
+}
+
+.blog-tag {
+    display: inline-block;
+    background-color: var(--color-dark);
+    color: var(--color-blue-light);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.approach-summary {
+    font-size: 1rem;
+    color: var(--color-white);
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 700px;
+    line-height: 1.5;
+}
+
+.easy-steps {
+    background-color: var(--color-dark);
+    padding-top: 40px;    
+    padding-bottom: 100px; 
+}
+easy-steps h2 {
+    margin-bottom: 50px; 
+}
+
+.steps-flow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin-top: 50px; 
+    gap: 30px; 
+}
+
+.step-item {
+    text-align: center;
+    flex: 1; 
+    padding: 0 15px; 
+    position: relative;
+    padding-top: 0 20px; 
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-blue-primary);
+    color: var(--color-dark);
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.step-item img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 180px; 
+    object-fit: cover; 
+    width: 100%;
+    opacity: 0.9;
+    transition: transform 0.3s;
+}
+
+.step-item:hover img {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+.flow-arrow {
+    align-self: center; 
+    color: var(--color-blue-light);
+    font-size: 2rem;
+    margin: 0 -5px;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .steps-flow {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step-item {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+}
+
+.testimonials-section {
+    background-color: var(--color-dark);
+    padding: var(--spacing-section) 0;
+}
+
+.testimonial-slider {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+.testimonial-item {
+    background-color: var(--color-medium);
+    padding: 40px;
+    border-radius: 18px;
+    min-height: auto; 
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.quote-icon {
+    font-size: 4rem;      
+    color: var(--color-blue-primary);
+    font-family: serif;
+    line-height: 0.5;
+    margin-bottom: 20px; 
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px; 
+}
+
+.reviewer-photo-small img {
+    width: 70px;    
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-blue-primary);
+}
+
+.reviewer-name {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.reviewer-title {
+    color: var(--color-blue-primary);
+    font-size: 0.85rem;
+}
+
+.quote-text p {
+    font-style: italic;
+    font-size: 1.15rem;
+    margin-bottom: 0; 
+    line-height: 1.6;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #374151;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--color-dark);
+}
+
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+
+.faq-item label {
+    display: block;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    position: relative;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.faq-item label::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--color-primary);
+}
+
+.faq-item label:hover {
+    background-color: var(--color-dark);
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-content p {
+    padding: 0 1.5rem;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.faq-item input[type="checkbox"]:checked + label {
+    background-color: #4b5563;
+}
+
+
+.faq-item input[type="checkbox"]:checked + label::after {
+    content: '—';
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+}
+
+
+.faq-item input[type="checkbox"]:checked ~ .faq-content {
+    max-height: 500px;
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+.cta-donation {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.cta-donation h2 {
+    color: var(--color-dark);
+}
+
+.donation-card {
+    background-color: var(--color-white);
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.donation-card h3 {
+    color: var(--color-dark);
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+.donation-card p {
+    color: #555;
+    padding: 0 5px;
+    margin-bottom: 15px;
+}
+
+.donate-now {
+    margin-bottom: 0;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.newsletter-strip {
+    background-color: var(--color-blue-primary);
+    padding: 30px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-dark);
+}
+
+.newsletter-content i {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.newsletter-content h3 {
+    color: var(--color-dark);
+    margin: 0;
+    flex-grow: 1;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 400px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    flex-grow: 1;
+}
+
+.newsletter-form button {
+    border-radius: 0 50px 50px 0;
+    padding: 10px 20px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.main-footer {
+    background-color: var(--color-medium);
+    padding-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+.footer-column a, .footer-column p {
+    display: block;
+    color: var(--color-text-dim);
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: var(--color-blue-light);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.site-title-footer {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-left: 10px;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--color-text-dim);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.42;
+    filter: blur(4px);
+    animation: float 12s infinite ease-in-out;
+}
+
+@media (max-width: 992px) {
+    .main-header {
+        flex-wrap: wrap;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .main-nav ul {
+        justify-content: space-around;
+    }
+    .split-layout {
+        flex-direction: column;
+    }
+    .image-content .small-image {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        text-align: center;
+    }
+    .main-heading {
+        font-size: 3rem;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .cards-grid, .blog-articles-grid, .donation-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .steps-flow {
+        flex-direction: column;
+    }
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 20px 0;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<body>
+
+    <div class="top-bar">
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i><a href="mailto:thecolorspectrum.advocacy@gmail.com">thecolorspectrum.advocacy@gmail.com</a>
+            <i class="fas fa-map-marker-alt"></i> Batangas City, Philippines
+        </div>
+        <div class="follow-us">
+            <span>Follow Us:</span>
+            <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/thecolorspectrum.advocacy?igsh=MXR5djhldXhkZXg4dA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/youthempow62747?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/the-color-spectrum-17b474399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="logo">
+            <a href="https://batstateu.edu.ph/" target="_blank">
+                <img src="BatStateU-NEU-Logo-1-300x282.png" alt="BatStateU Logo" width="50" height="50">
+            </a>
+            
+            <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank">
+                <img src="color spectrum logo.png" alt="The Color Spectrum Logo" width="52" height="52">
+            </a>
+        </div>
+
+        <nav class="main-nav" aria-label="Main Website Navigation">
+            <ul>
+                <li><a href="index.html" class="nav-link current-page">Home</a></li> 
+                <li><a href="about us.html" class="nav-link">About Us</a></li>
+                <li><a href="youth empowerment.html" class="nav-link">Empowerment</a></li>
+                <li><a href="voters education.html" class="nav-link">Education</a></li>
+                <li><a href="form tuu.html" class="nav-link">Join Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="tel:+639272524247" class="phone-link"><i class="fas fa-phone"></i> +63 927 252 4247</a>
+            <a href="form tuu.html" class="btn btn-primary get-quote-btn">Get Involved</a>
+            <button class="search-btn" aria-label="Search website"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    <div class="rainbow-line"></div>
+    <section class="hero-section" style="background-image: url('group');">
+        <div class="hero-content">
+            <h1 class="main-heading">
+                The Color Spectrum: <span class="highlight-green">Empowering the Youth to Light the Way.</span>
+            </h1>                
+            <p class="hero-subtitle">
+                A movement built to educate, inspire, and mobilize young people to take an active role in shaping their communities. 
+                We believe every young voice matters — and together, we can create a brighter, more informed future.
+            </p>
+
+            <div class="hero-actions">
+                <button class="btn btn-secondary">Find Resources</button>
+                <button class="btn btn-secondary">Get Involved</button>
+            </div>
+    </section>
+    <section class="section-padding about-us-split">
+        <div class="container split-layout">
+            <div class="text-content">
+                <span class="section-label">About the Project</span>
+                <h2>Empowering Youth for a Stronger Democracy</h2>
+                <div class="experience-badge">
+                    <p class="number">1 Goal:</p>
+                    <p class="text-small">Empower the Youth and Strengthen Voters Education.</p>
+                </div>
+                <p>
+                    We are a youth-driven initiative committed to encourage the youth awareness about voter education and empowerment. Through our project, we hope to help young people better understand their role in making informed choices. 
+                </p>
+                <p>
+                    We focus on sharing straightforward and easy-to-understand information so that topics like voting and civic participation feel less confusing and more relatable for students like us.
+                </p>
+                <button class="btn btn-secondary">Explore Our Mission</button>
+            </div>
+            <div class="image-content">
+                <img src="youth group.jfif" alt="A green globe" class="main-image">
+                <img src="group.jfif" alt="Hands holding saplings" class="small-image">
+            </div>
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="container">
+            <span class="section-label">By the Number</span>
+            <h2>Inspiring Young Voters to Lead Change</h2>
+            <p class="focus-note"> These nummbers highlight the growing influence of young voters and the importance of empowering them.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-users icon-large"></i>
+                    <p class="stat-number">60%</p>
+                    <p class="stat-description">Share of 2025 voters who are Millennials & Gen Z</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-user-friends icon-large"></i>
+                    <p class="stat-number">47.8M</p>
+                    <p class="stat-description">Young Voters Nationwide (Millennials + Gen Z</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-id-card icon-large"></i>
+                    <p class="stat-number">69M</p>
+                    <p class="stat-description">Registered voters nationwide (2025)</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-check-circle icon-large"></i>
+                    <p class="stat-number">81.65%</p>
+                    <p class="stat-description">Midterm election voter turnout (2025)</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-user-plus icon-large"></i>
+                    <p class="stat-number">Majority Youth</p>
+                    <p class="stat-description">Youth (15-30) make up most new voter registrants</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding services-grid">
+        <span class="section-label text-center">Our Approach</span>
+        <h2 class="text-center">Preserving the Future for the Next Generation</h2>
+        <p class ="approach-summary"> Through these approaches, we provide youth with the tools to participate actively and responsibly in society.</p>
+        <div class="container cards-grid">
+            <div class="service-card">
+                <img src="vote.jfif"" alt="Voter Education">
+                <h3>Voter Education</h3>
+                <p>Helping young and first-time voters understand the importance of participation in election. We provide accurate information on voting procedure, evaluating candidates, and recognizing credible platform, so the youth can make wise and confident decisions on election day.</p>
+                <a href="education.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <img src="youth.jfif" alt="Youth Empowerment">
+                <h3>Youth Empowerment</h3>
+                <p>Streghthening the skills, confidence, and leadership potential of today's youth. We equip young people with critical thinking, advocacy tools, and  oppurtunities to express their voice, empowrering them to inflluence change within rheir schools, communities and the nation.</p>
+                <a href="empowerment.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <img src="community.jfif" alt="Civic Engagement">
+                <h3>Civic Engagement</h3>
+                <p>Encouraging the youth participation beyond voting. We create oppurtunities for community involvement, volunteer work, discussions, and collaborative projects-helping the young people become active contributors in society and advocates for positive change.</p>
+                <a href="join.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding easy-steps">
+        <h2 class="text-center">3 Easy Steps to Join the Movement</h2>
+        <div class="container steps-flow">
+            <div class="step-item">
+                <div class="step-number">01</div>
+                <img src= "learn.jfif" alt="Step 1: Learn">
+                <h3>Learn</h3>
+                <p>Access our simple, youth-friendly guides to understand the democratic process.</p>
+            </div>
+            <i class="fas fa-arrow-right flow-arrow"></i>
+            <div class="step-item">
+                <div class="step-number">02</div>
+                <img src="group.jfif" alt="Step 2: Engage">
+                <h3>Engage</h3>
+                <p>Join civic activities, volunteer, and participate in community discussions.</p>
+            </div>
+            <i class="fas fa-arrow-right flow-arrow"></i>
+            <div class="step-item">
+                <div class="step-number">03</div>
+                <img src="lead.jfif" alt="Step 3: Lead">
+                <h3>Lead</h3>
+                <p>Use your empowered voice to advocate and shape the future of your community.</p>
+            </div>
+        </div>
+
+        <section class="testimonials-section">
+            <div class="container testimonial-slider">
+        
+                <div class="testimonial-item">
+                    <div class="quote-icon">"</div>
+        
+                    <div class="reviewer-info">
+                        <div class="reviewer-photo-small">
+                            <img src="placeholder person.jpg" alt="John Paul Segovia"> 
+                        </div>
+                        <div>
+                            <div class="reviewer-name">John Paul Segovia, Student</div>
+                            <div class="reviewer-title">(Cebu Normal University)</div>
+                            
+                            <div class="reviewer-title">
+                                <a href="https://www.gmanetwork.com/regionaltv/youngminds/104764/students-highlight-how-knowledge-is-key-in-elections/story/" target="_blank" style="color: inherit; text-decoration: underline;">
+                                    GMA News, (2024)
+                                </a>
+                            </div> 
+                        </div>
+                    </div>
+        
+                    <div class="quote-text">
+                        <p>"One person. One vote. One country. The voter awareness forum taught me a lot, but what really hit me were the small things we often overlook on election day. Knowing that the system will be secure through biometrics makes me more enthusiastic. I realized that voting is more than a civic duty, but a true opportunity to advocate for change. I'd definitely love to encourage my fellow youth to be informed voters in the future."</p>
+                    </div>
+                </div>
+        
+                <div class="testimonial-item">
+                    <div class="quote-icon">"</div>
+        
+                    <div class="reviewer-info">
+                        <div class="reviewer-photo-small">
+                            <img src="jude.jfif" alt="Jude Liao">
+                        </div>
+                        <div>
+                            <div class="reviewer-name">Jude Liao, PPRVC Executive Director</div>
+                            
+                            <div class="reviewer-title">
+                                <a href="https://ppcrv.org/a-youths-vote-is-more-than-just-one-vote/" target="_blank" style="color: inherit; text-decoration: underline;">
+                                    Rappler, (2025)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="quote-text">
+                        <p>"In the next five to 10 years, tayo na ang mamumuno. The youth are really the ones who will benefit from the choices we make, especially during elections."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="section-padding faq-section">
+    <div class="container">
+        <span class="section-label">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq">
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq1">
+                <label for="faq1" class="faq-question">What is youth empowerment?</label>
+                <div class="faq-content">
+                    <p>Youth empowerment involves giving young people the tools, support, and opportunities they need to make decisions and contribute meaningfully to society.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq2">
+                <label for="faq2" class="faq-question">Why should first-time voters care?</label>
+                <div class="faq-content">
+                    <p>First-time voters are powerful — their collective voice can shift outcomes and influence policies for years to come.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq3">
+                <label for="faq3" class="faq-question">How can youth prepare to vote?</label>
+                <div class="faq-content">
+                    <p>Register early, learn about the candidates and issues, and talk to others about civic topics. Preparation builds confidence.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq4">
+                <label for="faq4" class="faq-question">Is voting safe and confidential?</label>
+                <div class="faq-content">
+                    <p>Yes. Voting is designed to protect your privacy, with safety measures that ensure every vote is counted securely.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <section class="section-padding cta-donation">
+        <h2 class="text-center">Building A Brighter Future Changemakers</h2>
+        <div class="container donation-cards-grid">
+            <div class="donation-card">
+                <img src="group pic 123.jfif" alt="Youth Volunteers">
+                <h3>Become a Youth Volunteer</h3>
+                <p>Join our mission to empower young people througj voter eductaion and youth involvement programs. Start taking action today.</p>
+                <a href="form tuu.html" class="btn btn-secondary donate-now">Join Now</a>
+            </div>
+            <div class="donation-card">
+                <img src="group pic 12345.jfif" alt= "Support Voters Education">
+                <h3> Support Voter Education Events</h3>
+                <p>Help organize workshops, campus sessions, and activities that prepare students to become informed and active voters.      </p>
+                <a href="form tuu.html" class="btn btn-secondary donate-now">Get Involved</a>
+            </div>
+        </div>
+    </section>
+    <div class="newsletter-strip">
+        <div class="container newsletter-content">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Stay Informed, Stay Empowered</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-grid container">
+            <div class="footer-column branding-and-social">
+                <div class="logo">
+                    <a href="https://batstateu.edu.ph/" target="_blank">
+                        <img src="BatStateU-NEU-Logo-1-300x282.png" alt="BatStateU Logo" width="50" height="50">
+                    </a>
+                    
+                    <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank">
+                        <img src="color spectrum logo.png" alt="The Color Spectrum Logo" width="52" height="52">
+                    </a>
+                </div>        
+                <p>Empowering the youth to light the way for a more informed and engaged democracy.</p>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/thecolorspectrum.advocacy?igsh=MXR5djhldXhkZXg4dA==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/youthempow62747?s=21" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/the-color-spectrum-17b474399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="#">Resources</a>
+                <a href="form tuu.html">Get Involved</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-column services">
+                <h3>What We Offer</h3>
+                <a href="#">Voter Education</a>
+                <a href="#">Youth Empowerment</a>
+                <a href="#">Civic Engagement</a>
+                <a href="#">Leadership Mentoring</a>
+                <a href="#">Community Action</a>
+            </div>
+                <div class="footer-column contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:thecolorspectrum.advocacy@gmail.com">thecolorspectrum.advocacy@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+639272524247">+63 927 252 4247</a></p>
+                    <p>Address: Batangas City, Philippines</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Color Spectrum: Empowering the Youth to Light the Way. All Rights Reserved. </p>
+        </div>
+    </footer>
+</body>
+</html>

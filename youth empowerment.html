@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Color Spectrum: Empowering the Youth to Light the Way</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+:root {
+    --color-dark: #0D1321;         
+    --color-medium: #1D2A42;        
+    --color-blue-primary: #3498DB;  
+    --color-blue-light: #5DADE2;   
+    --color-text-light: #E0E0E0;    
+    --color-text-dim: #A0A0A0;      
+    --color-white: #FFFFFF;        
+    --spacing-section: 80px;
+
+    --color-pillar-red: #E74C3C;
+    --color-pillar-yellow: #F39C12;
+    --color-pillar-green: #2ECC71;
+    --color-pillar-blue: #3498DB;
+    --color-pillar-violet: #9B59B6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue-primary);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-blue-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: var(--spacing-section) 0;
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-label {
+    display: block;
+    color: var(--color-blue-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-heading {
+    color: var(--color-green-accent);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.section-description {
+    color: var(--color-text-dim); 
+    margin-bottom: 40px; 
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    margin: 40px;
+}
+
+.highlight-green {
+    color: var(--color-green-accent); 
+}
+
+.source-citation, .ecosystem-citation {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--color-blue-primary); 
+    font-weight: 400;
+    font-style: italic;
+}
+.ecosystem-citation {
+    color: var(--color-green-accent);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-blue-primary);
+    color: var(--color-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-blue-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-blue-primary); 
+    padding: 20px 30px;
+    color: var(--color-blue-primary); 
+    font-weight: 600;
+}
+.btn-secondary:hover {
+    background-color: var(--color-blue-primary); 
+    color: var(--color-dark); 
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+.highlight-green {
+    color: var(--color-blue-primary);
+}
+
+.top-bar {
+    background-color: var(--color-medium);
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-bar .contact-info, .top-bar .follow-us {
+    padding: 0 20px;
+}
+
+.top-bar i {
+    margin-right: 5px;
+    color: var(--color-blue-light);
+}
+
+.main-header {
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: var(--color-text-light);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-blue-primary);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after, .current-page::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.phone-link {
+    color: var(--color-blue-light);
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: var(--color-blue-primary);
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.rainbow-line {
+    height: 8px;
+    background: linear-gradient(to right,
+        #ff4e4e, #ffa935, #fff352,
+        #4cd37d, #47b0ff, #7b6dff, #d56dff);
+    position: sticky;
+    top: 80px;
+    z-index: 999;
+    
+}
+
+.hero-intro {
+    padding: 100px 0;
+}
+.main-heading {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+.hero-subtext {
+    font-size: 1.3rem;
+    color: var(--color-text-dim);
+    max-width: 850px;
+    margin: 0 auto 50px;
+}
+.hero-actions a {
+    margin: 0 10px;
+}
+
+.two-column-info {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    padding: 80px 40px;
+    max-width: 1300px;
+    margin: auto;
+}
+.info-text-section, .info-governance-section {
+    flex: 1;
+    padding: 0 20px;
+}
+.info-text-section h1, .info-governance-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-green-accent);
+    margin-bottom: 15px;
+    text-align: center;
+}
+.info-text-section p, .info-governance-section p {
+    font-size: 1.15rem; 
+    line-height: 1.8;
+    color: var(--color-text-light);
+    text-align: justify;
+}
+
+.pillars-section {
+    margin: 40px;
+    background: var(--color-medium); 
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pillars-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.pillar-card {
+    background: var(--color-dark);
+    width: 18%; 
+    border-radius: 10px;
+    padding: 25px 15px;
+    border-top: 5px solid transparent; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    background: var(--color-dark);
+}
+
+.pillar-icon {
+    width: 50px;      
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;  
+}
+
+.pillar-red { border-color: var(--color-pillar-red); }
+.pillar-red:hover { box-shadow: 0 0 20px rgba(231, 76, 60, 0.5); }
+
+.pillar-yellow { border-color: var(--color-pillar-yellow); }
+.pillar-yellow:hover { box-shadow: 0 0 20px rgba(243, 156, 18, 0.5); }
+
+.pillar-green { border-color: var(--color-pillar-green); }
+.pillar-green:hover { box-shadow: 0 0 20px rgba(46, 204, 113, 0.5); }
+
+.pillar-blue { border-color: var(--color-pillar-blue); }
+.pillar-blue:hover { box-shadow: 0 0 20px rgba(52, 152, 219, 0.5); }
+
+.pillar-violet { border-color: var(--color-pillar-violet); }
+.pillar-violet:hover { box-shadow: 0 0 20px rgba(155, 89, 182, 0.5); }
+
+.pillar-card h3 {
+    font-size: 1.15rem;
+    color: var(--color-white);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.pillar-card p {
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.programs-section {
+    margin: 40px;
+    background: var(--color-medium); 
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.programs-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+    .program-card {
+        flex: 1 1 45%;  
+        max-width: 48%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .program-card {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+}
+
+.program-card {
+    flex: 1 1 30%;      
+    max-width: 32%;    
+    background: var(--color-dark); 
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid rgba(109, 240, 74, 0.2); 
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.program-icon {
+    width: 60px;          
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50px;  
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.program-card p {
+    color: var(--color-text-dim);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.flow-section {
+    margin: 40px;
+    background: var(--color-dark);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.flow-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;  
+    gap: 15px;                     
+    margin-top: 30px;
+    flex-wrap: nowrap;               
+    overflow-x: auto;                
+    padding-bottom: 10px;
+}
+
+.flow-step {
+    flex: 0 0 400px;                
+    text-align: center;
+    padding: 20px;                   
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    background-color: var(--color-dark); 
+}
+
+.flow-step:hover {
+    transform: translateY(-5px);
+}
+
+.flow-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid transparent;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    overflow: hidden;               
+    background-color: var(--color-light); 
+}
+
+.flow-icon-wrapper img.flow-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;             
+    display: flex;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.flow-step h3 {
+    font-size: 1.3rem;
+    color: var(--color-white);      
+    margin-bottom: 10px;
+}
+
+.flow-step p {
+    color: var(--color-text-dim);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.flow-connector {
+    flex: 0 0 40px;
+    height: 3px;
+    background-color: var(--color-blue-primary);
+    margin-top: 35px;
+}
+
+.step-red { background-color: var(--color-pillar-red); }
+.step-yellow { background-color: var(--color-pillar-yellow); }
+.step-blue { background-color: var(--color-pillar-blue); }
+
+@media screen and (max-width: 800px) {
+    .flow-step { flex: 0 0 200px; }
+}
+
+@media screen and (max-width: 600px) {
+    .flow-container { flex-wrap: wrap; }
+    .flow-step { flex: 1 1 100%; }
+    .flow-connector { display: none; }
+}
+
+.YouthOrg, .YouthLead {
+    background-color: var(--color-dark);
+    padding: 60px 0;
+}
+
+.youthcontainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.youthcard {
+    background-color: var(--color-medium);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.youthcard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(109, 240, 74, 0.2); 
+    border: 1px solid var(--color-green-accent);
+}
+
+.youthcard a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    display: block;
+}
+
+.youthorg-img {
+    width: 100%;
+    height: 320px; 
+    object-fit: cover; 
+    object-position: center;
+    border-bottom: 3px solid var(--color-pillar-yellow);
+}
+
+.youthcard p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 15px 10px;
+    margin: 0;
+    color: var(--color-white);
+}
+
+.youthleadcontainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.youthleadcard {
+    background-color: var(--color-medium);
+    border-radius: 10px;
+    min-height: auto;
+    overflow: hidden;
+    width: 350px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.youthleadcard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(109, 240, 74, 0.2);
+    border: 1px solid var(--color-green-accent);
+}
+
+.youthleadcard a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    display: block;
+}
+
+.youthlead-img {
+    width: 120px;        
+    height: 120px;     
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 20px auto 10px; 
+    border: 3px solid var(--color-blue-primary);  
+}
+
+.youthleadcard p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0 10px 20px;
+    margin: 0;
+    color: var(--color-green-accent); 
+}
+
+.empower-section {
+    margin: 40px;
+    background: var(--color-dark);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.empower-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.empower-card {
+    background: var(--color-medium);
+    width: 33%;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.empower-card:hover {
+    transform: scale(1.03);
+    border-color: var(--color-green-accent);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.rally-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.empower-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-green-accent);
+    margin-bottom: 8px;
+}
+
+.empower-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+.accordion-section {
+    margin: 40px;
+    padding: 40px;
+    background: var(--color-medium);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.accordion-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.challenge-accordion {
+    background: var(--color-dark);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.challenge-accordion summary {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    list-style: none;
+    color: var(--color-green-accent);
+    transition: background-color 0.3s;
+}
+
+.challenge-accordion summary:hover {
+    background-color: rgba(109, 240, 74, 0.05);
+}
+
+.challenge-accordion[open] summary {
+    background-color: rgba(109, 240, 74, 0.1);
+    color: var(--color-white);
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.accordion-title {
+    flex-grow: 1;
+    text-align: left;
+    color: var(--color-white);
+}
+
+.accordion-arrow {
+    transition: transform 0.3s ease;
+}
+
+.challenge-accordion[open] .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 20px 20px 50px;
+    color: var(--color-text-dim);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.rizal-quote-section {
+    padding: 40px 0;
+    background-color: var(--color-dark);
+}
+.rizal-quote {
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--color-text-light);
+    margin: 0;
+    line-height: 1.2;
+    padding: 0 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.rizal-source {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: var(--color-green-accent);
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .pillars-container {
+        justify-content: center;
+    }
+    .pillar-card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .two-column-info, .programs-container, .empower-container, 
+    .flow-container, .youthcontainer, .youthleadcontainer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+    .info-text-section, .info-governance-section, .program-card, 
+    .empower-card, .flow-step, .youthcard, .youthleadcard {
+        width: 100%;
+        padding: 20px;
+    }
+    .main-heading {
+        font-size: 2.8rem;
+    }
+    .flow-connector {
+        width: 3px;
+        height: 50px;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-heading {
+        font-size: 2.2rem;
+    }
+    .pillars-section, .programs-section, .empower-section, 
+    .accordion-section, .YouthOrg, .YouthLead {
+        margin: 20px 10px;
+        padding: 30px 15px;
+    }
+    .pillar-card {
+        width: 100%;
+    }
+
+    .rizal-quote {
+        font-size: 1.8rem;
+    }
+}
+
+.newsletter-strip {
+    background-color: var(--color-blue-primary);
+    padding: 30px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-dark);
+}
+
+.newsletter-content i {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.newsletter-content h3 {
+    color: var(--color-dark);
+    margin: 0;
+    flex-grow: 1;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 400px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    flex-grow: 1;
+}
+
+.newsletter-form button {
+    border-radius: 0 50px 50px 0;
+    padding: 10px 20px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.main-footer {
+    background-color: var(--color-medium);
+    padding-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+.footer-column a, .footer-column p {
+    display: block;
+    color: var(--color-text-dim);
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: var(--color-blue-light);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.site-title-footer {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-left: 10px;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--color-text-dim);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.42;
+    filter: blur(4px);
+    animation: float 12s infinite ease-in-out;
+}
+
+@media (max-width: 992px) {
+    .main-header {
+        flex-wrap: wrap;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .main-nav ul {
+        justify-content: space-around;
+    }
+    .image-content .small-image {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        text-align: center;
+    }
+    .main-heading {
+        font-size: 3rem;
+    }
+    .cards-grid, .blog-articles-grid, .donation-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<body>
+
+    <div class="top-bar">
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i><a href="mailto:thecolorspectrum.advocacy@gmail.com">thecolorspectrum.advocacy@gmail.com</a>
+            <i class="fas fa-map-marker-alt"></i> Batangas City, Philippines
+        </div>
+        <div class="follow-us">
+            <span>Follow Us:</span>
+            <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/thecolorspectrum.advocacy?igsh=MXR5djhldXhkZXg4dA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/youthempow62747?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/the-color-spectrum-17b474399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="logo">
+            <a href="https://batstateu.edu.ph/" target="_blank">
+                <img src="BatStateU-NEU-Logo-1-300x282.png" alt="BatStateU Logo" width="50" height="50">
+            </a>
+            
+            <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank">
+                <img src="color spectrum logo.png" alt="The Color Spectrum Logo" width="52" height="52">
+            </a>
+        </div>    
+        <nav class="main-nav" aria-label="Main Website Navigation">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li> 
+                <li><a href="about us.html" class="nav-link">About Us</a></li>
+                <li><a href="youth empowerment.html" class="nav-link current-page">Empowerment</a></li>
+                <li><a href="voters education.html" class="nav-link">Education</a></li>
+                <li><a href="form tuu.html" class="nav-link">Join Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="tel:+639272524247" class="phone-link"><i class="fas fa-phone"></i> +63 927 252 4247</a>
+            <a href="form tuu.html" class="btn btn-primary get-quote-btn">Get Involved</a>
+            <button class="search-btn" aria-label="Search website"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    <div class="rainbow-line"></div>
+    
+    <section class="section-padding hero-intro">
+        <div class="container text-center">
+            <p class="section-label">The Color Spectrum: Empowering the Youth to Light the Way</p>
+            <h1 class="main-heading">
+                <span class=>Empowering</span> the Filipino Youth <br>
+                to Lead Transformative Change                
+            </h1>
+            <p class="hero-subtext">
+                We nurture a new generation of Filipino changemakers—equipping the youth with the courage, capacity, and leadership to uplift communities and transform the nation.
+            </p>
+    </section>
+    
+    <div class="two-column-info">
+        
+        <section class="info-text-section">
+            <h1>💡 THE PHILIPPINE YOUTH ADVANTAGE</h1>
+            <p>
+                The Philippines is home to a vibrant and dynamic youth population whose creativity, energy, and perspectives play a vital role in shaping the country’s future. This emerging generation holds significant potential to lead social progress, spark innovation, and promote inclusive development.
+                <br><br>
+                Recognizing and investing in this strength—often described as the youth advantage—allows the nation to turn youthful passion into meaningful and sustainable growth.
+                <br>
+                <em class="source-citation">
+                    Source: 
+                    <a href="https://nyc.gov.ph/pydp-2023-2028/" target="_blank">
+                        Philippine Youth Development Plan (PYDP) 2023–2028
+                    </a>
+                </em>
+            </p>
+        </section>
+        
+        <section class="info-governance-section">
+            <h2 class="section-title">🔥 DEFINING YOUTH EMPOWERMENT</h2>
+            <p class="section-text">
+                Youth empowerment is the process of providing young people with the skills, opportunities, resources, and voice needed to participate meaningfully in decisions that affect their lives and communities.
+                <br><br>
+                When young people are empowered, they grow into leaders, innovators, and changemakers who strengthen democratic participation and contribute to building resilient, future-ready communities.
+                <br>
+                <em class="source-citation">
+                    Source: 
+                    <a href="https://nyc.gov.ph/" target="_blank">
+                        National Youth Commission – Youth Participation Framework
+                    </a>
+                </em>
+            </p>
+        </section>
+    
+    </div>
+    
+    <hr class="section-divider">
+    
+<section class="pillars-section">
+    <h2 class="section-heading">🌈 THE FIVE PILLARS OF YOUTH EMPOWERMENT</h2>
+    <p class="section-description">
+        Our approach is guided by both global and local youth development frameworks, focusing on the
+        systems and conditions needed to empower every young Filipino to lead and succeed.
+    </p>
+
+    <div class="pillars-container">
+
+        <div class="pillar-card pillar-red">
+            <img src="access.jfif" alt="Access Icon" class="pillar-icon">
+            <h3>1. Access and Opportunity</h3>
+            <p>
+                Expanding equitable access to quality education, decent employment pathways, and
+                comprehensive health and well-being services.
+            </p>
+        </div>
+
+        <div class="pillar-card pillar-yellow">
+            <img src="voice.jfif" alt="Voice Icon" class="pillar-icon">
+            <h3>2. Voice and Participation</h3>
+            <p>
+                Strengthening youth engagement in policy-making, local governance, and national development
+                by ensuring their perspectives are included and valued.
+            </p>
+        </div>
+
+        <div class="pillar-card pillar-green">
+            <img src="skill development.jfif" alt="Skills Icon" class="pillar-icon">
+            <h3>3. Skill Development</h3>
+            <p>
+                Building critical thinking, technical expertise, civic literacy, and ethical leadership to help
+                young people navigate and address complex social challenges.
+            </p>
+        </div>
+        
+        <div class="pillar-card pillar-blue">
+            <img src="safety.jfif" alt="Safety Icon" class="pillar-icon">
+            <h3>4. Safety and Well-being</h3>
+            <p>
+                Promoting policies and environments that protect young people, support mental health, and
+                uphold safe, inclusive, and non-discriminatory spaces.
+            </p>
+        </div>
+        
+        <div class="pillar-card pillar-violet">
+            <img src="community involvement.jfif" alt="Ownership Icon" class="pillar-icon">
+            <h3>5. Ownership and Responsibility</h3>
+            <p>
+                Fostering accountability, community involvement, and a strong sense of responsibility for
+                long-term national progress and sustainability.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<hr class="section-divider">
+    
+<section class="programs-section">
+    <h2 class="section-heading">🛠️ OUR CORE EMPOWERMENT PROGRAMS</h2>
+    <p class="section-description">
+        We work through three strategic program pillars designed to develop active citizens, informed voters,
+        and youth leaders who can influence meaningful policy change.
+    </p>
+
+    <div class="programs-container">
+
+        <div class="program-card">
+            <img src="ballot box.jfif" alt="Civic Education Icon" class="program-icon">
+            <h3>Civic & Voter Education</h3>
+            <p>
+                We deliver online and in-person programs that strengthen informed political participation,
+                promote transparent governance, and support responsible voting among young Filipinos.
+            </p>
+        </div>
+
+        <div class="program-card">
+            <img src="policy.jfif" alt="Policy Advocacy Icon" class="program-icon">
+            <h3>Policy Advocacy & Action</h3>
+            <p>
+                We empower youth advocates to engage in grassroots lobbying and policy conversations on 
+                issues such as climate resilience, human rights, and equitable education.
+            </p>
+        </div>
+
+        <div class="program-card">
+            <img src="mentorship.jfif" alt="Leadership Icon" class="program-icon">
+            <h3>Leadership & Skills Mentoring</h3>
+            <p>
+                We provide training and mentorship that strengthen ethical leadership, policy research skills,
+                and community project management for sustainable impact.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <hr class="section-divider">
+    
+    <section class="flow-section">
+        <h2 class="section-heading">🌐 THE YOUTH EMPOWERMENT ECOSYSTEM</h2>
+        <p class="section-description">
+            Effective youth empowerment thrives through coordinated efforts across all sectors, guided by strong legal frameworks 
+            and supported by communities, institutions, and the private sector.
+        </p>
+    
+        <div class="flow-container">
+            
+            <div class="flow-step">
+                <div class="flow-icon-wrapper step-red">
+                    <img src="law.jfif" alt="Legal Framework Icon" class="flow-icon">
+                </div>
+                <h3 class="flow-title">1. Legal Framework & Policy</h3>
+                <p>
+                    Youth empowerment is anchored in legislation such as the SK Reform Law (RA 10742), which ensures young people 
+                    have a direct voice in local governance. Advocacy for full implementation strengthens this foundation.
+                </p>
+                <em class="ecosystem-citation">SK Reform Law (RA 10742)</em>
+            </div>
+    
+            <div class="flow-connector"></div>
+    
+            <div class="flow-step">
+                <div class="flow-icon-wrapper step-yellow">
+                    <img src="ngo.jfif" alt="Civil Society Icon" class="flow-icon">
+                </div>
+                <h3 class="flow-title">2. Civil Society & Community Organizations</h3>
+                <p>
+                    Civil society organizations (CSOs) and NGOs translate policy into action, delivering non-formal education, 
+                    advocacy training, and direct community engagement that complements government efforts.
+                </p>
+                <em class="ecosystem-citation">Bridging Policy to Community Impact</em>
+            </div>
+    
+            <div class="flow-connector"></div>
+    
+            <div class="flow-step">
+                <div class="flow-icon-wrapper step-blue">
+                    <img src="business.jfif" alt="Private Sector Icon" class="flow-icon">
+                </div>
+                <h3 class="flow-title">3. Private Sector Partnerships</h3>
+                <p>
+                    The private sector contributes resources, mentorship, and employment opportunities, ensuring youth programs 
+                    are relevant, practical, and aligned with the needs of a modern workforce.
+                </p>
+                <em class="ecosystem-citation">Skills, Mentorship, and Opportunity</em>
+            </div>
+    
+        </div>
+    </section>    
+
+    <hr class="section-divider">
+    
+    <section class="YouthOrg section-padding">
+        <div class="container text-center">
+    
+            <h2 class="section-heading">🏛️ NOTABLE YOUTH ORGANIZATIONS IN THE PHILIPPINES</h2> 
+    
+            <div class="youthcontainer">
+    
+                <div class="youthcard">
+                    <a href="https://en.wikipedia.org/wiki/Anakbayan">
+                    <img src="anakbayan.jpg" alt="AnakBayan" class="youthorg-img">
+                    <p>ANAKBAYAN</p></a>
+                </div>
+    
+                <div class="youthcard">
+                    <a href="https://en.wikipedia.org/wiki/Kabataan">
+                    <img src="kabataan.png" alt="Kabataan Partylist" class="youthorg-img">
+                    <p>KABATAAN PARTYLIST</p></a>
+                </div>
+    
+                <div class="youthcard">
+                    <a href="https://en.wikipedia.org/wiki/Youth_Reform_Movement">
+                    <img src="youth movement.jpg" alt="YOUTH REFORM MOVEMENT PH" class="youthorg-img">
+                    <p>YOUTH REFORM MOVEMENT PH</p></a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <section class="YouthLead section-padding">
+        <div class="container text-center">
+    
+            <h2 class="section-heading">⭐ NOTABLE YOUTH LEADERS IN THE PHILIPPINES</h2> 
+    
+            <div class="youthleadcontainer">
+    
+                <div class="youthleadcard">
+                    <a href="http://en.wikipedia.org/wiki/Mitzi_Jonelle_Tan">
+                    <img src="mitzi tan.jpg" alt="Mitzi Jonelle Tan" class="youthlead-img">
+                    <p>Mitzi Jonelle Tan</p></a>
+                </div>
+    
+                <div class="youthleadcard">
+                    <a href="https://en.wikipedia.org/wiki/Sarah_Elago">
+                    <img src="sarah ilago.jpg" alt="Sarah Elago" class="youthlead-img">
+                    <p>Sarah Elago</p></a>
+                </div>
+    
+                <div class="youthleadcard">
+                    <a href="https://en.wikipedia.org/wiki/Louise_Mabulo">
+                    <img src="louise mabulo.jpg" alt="Louise Mabulo" class="youthlead-img">
+                    <p>Louise Mabulo</p></a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <hr class="section-divider">
+    
+    <section class="empower-section">
+        <h2 class="section-heading">🌟 YOUTH LEADING THE WAY (PH ADVOCACY)</h2>
+        <p class="section-description">Filipino youth are already driving national conversations and mobilizing for systemic change.</p>
+    
+        <div class="empower-container">
+    
+            <div class="empower-card">
+                <img src="climate justice.jfif" alt="[Youth Climate Action Rally]" class="rally-image">
+                <h3>Climate Justice</h3>
+                <p>Leading nationwide calls for urgent governmental action on environmental protection and climate disaster planning, focusing on vulnerable communities.</p>
+            </div>
+    
+            <div class="empower-card">
+                <img src="human rights.jfif" alt="[Human Rights Advocacy Rally]" class="rally-image">
+                <h3>Human Rights</h3>
+                <p>Advocating for the rule of law, democracy, and government accountability through peaceful assemblies and digital activism.</p>
+            </div>
+    
+            <div class="empower-card">
+                <img src="accessible education.jpg" alt="[Education Reform Rally]" class="rally-image">
+                <h3>Accessible Education</h3>
+                <p>Demanding quality and affordable education for all students, addressing issues of funding, curriculum reform, and infrastructure gaps.</p>
+            </div>
+    
+        </div>
+    </section>
+    <hr class="section-divider">
+    
+    <section class="accordion-section">
+        <h2 class="section-heading">🛑 CRITICAL CHALLENGES FACING FILIPINO YOUTH</h2>
+        <p class="section-description">True empowerment requires confronting the systemic barriers that disproportionately affect young Filipinos, especially those in marginalized sectors.</p>
+    
+        <div class="accordion-container">
+            
+            <details class="challenge-accordion">
+                <summary>
+                    <i class="fas fa-hand-holding-usd accordion-icon"></i>
+                    <span class="accordion-title">Economic & Educational Disparity</span>
+                    <i class="fas fa-chevron-down accordion-arrow"></i>
+                </summary>
+                <div class="accordion-content">
+                    <p>High rates of "Not in Education, Employment, or Training" (NEET) among youth (estimated at 20-25%) due to lack of job opportunities and inadequate access to quality, relevant tertiary education.</p>
+                    <em class="source-citation">Source: Philippine Institute for Development Studies (PIDS)</em>
+                </div>
+            </details>
+    
+            <details class="challenge-accordion">
+                <summary>
+                    <i class="fas fa-network-wired accordion-icon"></i>
+                    <span class="accordion-title">The Digital & Information Divide</span>
+                    <i class="fas fa-chevron-down accordion-arrow"></i>
+                </summary>
+                <div class="accordion-content">
+                    <p>While internet penetration is high, the gap in digital literacy and access to reliable information remains vast, making youth vulnerable to disinformation and limiting participation in the digital economy.</p>
+                    <em class="source-citation">Source: Department of Information and Communications Technology (DICT)</em>
+                </div>
+            </details>
+    
+            <details class="challenge-accordion">
+                <summary>
+                    <i class="fas fa-users accordion-icon"></i>
+                    <span class="accordion-title">Intersectionality & Policy Gaps</span>
+                    <i class="fas fa-chevron-down accordion-arrow"></i>
+                </summary>
+                <div class="accordion-content">
+                    <p>Empowerment efforts must address intersectional identities, including Indigenous Peoples (IP) youth, LGBTQ+ youth, and young women, who face compounded barriers due to systemic discrimination and lack of protective policies.</p>
+                    <em class="source-citation">Source: Human Rights Watch / Local NGO Reports</em>
+                </div>
+            </details>
+            
+        </div>
+    </section>
+    <section class="rizal-quote-section">
+        <div class="container text-center">
+            <blockquote class="rizal-quote">
+                “Ang kabataan ang pag-asa ng bayan.”
+            </blockquote>
+            <p class="rizal-source">— Dr. José Rizal</p>
+        </div>
+    </section>
+    
+    <div class="newsletter-strip">
+        <div class="container newsletter-content">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Stay Informed, Stay Empowered</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-grid container">
+            <div class="footer-column branding-and-social">
+                <div class="footer-logo">
+                    <a href="https://batstateu.edu.ph/" target="_blank">
+                        <img src="BatStateU-NEU-Logo-1-300x282.png" alt="BatStateU Logo" width="50" height="50">
+                    </a>
+                    
+                    <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank">
+                        <img src="color spectrum logo.png" alt="The Color Spectrum Logo" width="52" height="52">
+                    </a>
+                </div>    
+                <p>Empowering the youth to light the way for a more informed and engaged democracy.</p>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/share/1i81EDCULX/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/thecolorspectrum.advocacy?igsh=MXR5djhldXhkZXg4dA==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/youthempow62747?s=21" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/the-color-spectrum-17b474399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="#">Resources</a>
+                <a href="form tuu.html">Get Involved</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-column services">
+                <h3>What We Offer</h3>
+                <a href="#">Voter Education</a>
+                <a href="#">Youth Empowerment</a>
+                <a href="#">Civic Engagement</a>
+                <a href="#">Leadership Mentoring</a>
+                <a href="#">Community Action</a>
+            </div>
+                <div class="footer-column contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:thecolorspectrum.advocacy@gmail.com">thecolorspectrum.advocacy@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+639272524247">+63 927 252 4247</a></p>
+                    <p>Address: Batangas City, Philippines</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Color Spectrum: Empowering the Youth to Light the Way. All Rights Reserved. </p>
+        </div>
+    </footer>
+</body>
+</html>
